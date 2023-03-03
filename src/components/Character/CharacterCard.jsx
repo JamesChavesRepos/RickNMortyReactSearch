@@ -1,6 +1,8 @@
 import React from 'react'
 import { useFavorites } from "../../context";
 import './CharacterCard.css'
+import trash from '../../assets/delete.svg'
+import plus from '../../assets/add.svg'
 
 export default function CharacterCard({ props }) {
 
@@ -35,8 +37,8 @@ export default function CharacterCard({ props }) {
           </span>
         {
           favorites.includes(id) ?
-            <button onClick={() => removeFavorite(props)}>Remove </button>
-            : <button onClick={() => addFavorite(props)}>Add </button>
+            <button onClick={() => removeFavorite(props)}><img src={trash}/> Remove </button>
+            : <button onClick={() => addFavorite(props)}><img src={plus}/>Add </button>
         }
       </article>
     </div>

@@ -40,4 +40,17 @@ const getCharacters = async (search?: string) => {
   return data;
 };
 
+export const getFavsCharacters = async (favsIds?: number[]) => {
+  if(favsIds?.length > 0) {
+
+    const response = await fetch(
+      `${API_URL}/character/${favsIds}`
+      );
+      const data = (await response.json()) as Root;
+      return data;
+    }
+
+    return []
+};
+
 export default getCharacters;

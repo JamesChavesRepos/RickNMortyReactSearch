@@ -7,7 +7,25 @@
   padding: 12px;
   font-size: x-large;
   border: none;
+  margin-bottom: 25px;
+}
+.search-input::placeholder{
+  font-size: 14px;
+  color: var(--light);
 }
 .App {
   padding: 2rem;
+}
+h5 {
+  position: absolute;
+  font-size: 20px;
+  top: 160px;
+  right: 5px;
+  text-decoration: underline;
+}
+.alive{
+  color: green;
+}
+.dead{
+  color: red;
 }

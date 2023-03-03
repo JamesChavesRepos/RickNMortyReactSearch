@@ -1,10 +1,9 @@
 import * as React from "react";
 import getCharacters from "./api";
 
-type Favorite = Awaited<ReturnType<typeof getCharacters>>["results"][number];
-type Favorites = Favorite[];
+type Favorites = number[];
 
-type ReducerPayload = {
+type ReducerPayload = { // understood 
   type: "REMOVE_FAVORITE" | "ADD_FAVORITE";
   payload: { id: number };
 };
@@ -17,11 +16,9 @@ export const FavoritesContext = React.createContext<{
 const reducer: React.Reducer<Favorites, ReducerPayload> = (state, action) => {
   switch (action.type) {
     case "ADD_FAVORITE":
-      // TODO: Add favorite and return the new state
-      return state;
+      return [...state, action.payload.id];
     case "REMOVE_FAVORITE":
-      // TODO: Remove favorite and return the new state
-      return state;
+      return state.filter(favorite => favorite !== action.payload.id);
     default:
       return state;
   }

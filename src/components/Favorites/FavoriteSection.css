@@ -1,0 +1,16 @@
+.fav-section {
+    width: 115%;
+    scale: 0.8;
+    background: transparent;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    height: max-content;
+    position: relative;
+    left: -50px;
+    overflow-x: auto;
+  }
+  
+  .fav-section article {
+    margin-left: 15px;
+  }

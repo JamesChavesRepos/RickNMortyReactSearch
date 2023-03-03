@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react"; 
 import { useFavorites } from "./context";
 import getCharacters from "./api";
-import "./App.css";
+import CharacterCard from "./components/Character/CharacterCard";
+import FavoriteSection from "./components/Favorites/FavoriteSection";
+import './App.css'
 
 function App() {
   const [data, setData] = useState();
@@ -9,29 +11,37 @@ function App() {
   const [favorites, dispatchFavorites] = useFavorites();
   const [search, setSearch] = useState("");
 
-  // TODO: Implement search with getCharacters
+  
+
+  const characterSearch = ()=>{
+    getCharacters(search)
+  }
 
   // TODO: Implement initial fetch from getCharacters
-
+  
+  useEffect(() => {
+    setLoading(true);
+    (async function fetchData() {
+      const results = await getCharacters(search);
+      setLoading(false);
+      setData(results);
+      console.log(results)
+    })();
+  }, [setData, setLoading, search]);
   return (
-    <div className="App">
-      {/* TODO: Implement search */}
-      <input type="text" name="search" className="search-input" />
+    <main className="App">
 
-      {/* TODO: Style list and container */}
-      {loading && <div>Loading...</div>}
-      <div>
+      {favorites.length > 0 ? <FavoriteSection props={data}/> : <intro/>}
+      <input placeholder="Seacrh For More Characters to add to your list." type="text" name="search" className="search-input" onChange={(event) => setSearch(event.target.value)} />
+      {loading && <div>🔎 Loading...</div>}
+
+      <div className="card-container">
         {data?.results &&
           data.results.map((character) => (
-            <div key={character.id}>
-              <h2>{character.name}</h2>
-              <img src={character.image} alt={character.name} />
-              {/* TODO: Implement add/remove favorites */}
-              <button>Add to favorites</button>
-            </div>
+            <CharacterCard props={character} />
           ))}
       </div>
-    </div>
+    </main>
   );
 }
 

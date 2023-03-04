@@ -23,7 +23,7 @@ function App() {
   return (
     <main className="App">
       {favorites.length > 0 ? <FavoriteSection props={data} /> : <intro />}
-      <input placeholder="Seacrh...." type="text" name="search" className="search-input" onChange={(event) => setSearch(event.target.value)} />
+      <input placeholder="Seacrh for your favorite characters...." type="text" name="search" className="search-input" onChange={(event) => setSearch(event.target.value)} />
       {loading && <div>🔎 Loading...</div>}
 
       <div className="card-container">

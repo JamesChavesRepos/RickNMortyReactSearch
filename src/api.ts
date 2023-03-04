@@ -31,7 +31,6 @@ export interface Location {
 }
 
 const API_URL = `https://rickandmortyapi.com/api` as const;
-
 const getCharacters = async (search?: string) => {
   const response = await fetch(
     search ? `${API_URL}/character/?name=${search}` : `${API_URL}/character`
@@ -39,17 +38,14 @@ const getCharacters = async (search?: string) => {
   const data = (await response.json()) as Root;
   return data;
 };
-
 export const getFavsCharacters = async (favsIds?: number[]) => {
   if(favsIds?.length > 0) {
-
     const response = await fetch(
       `${API_URL}/character/${favsIds}`
       );
       const data = (await response.json()) as Root;
       return data;
     }
-
     return []
 };
 

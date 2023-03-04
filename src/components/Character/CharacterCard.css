@@ -6,7 +6,6 @@
   height: max-content;
   transition: var(--transition);
 }
-
 .character-card {
   border-radius: 10px 10px 0 0;
   height: 300px;
@@ -19,19 +18,21 @@
   padding-bottom: 20px;
   background-color: var(--white);
 }
-
+.character-card:hover{
+  border:3px solid var(--lBlue);;
+}
 .character-card img {
   height: 200px;
-  width: 150px;
+  width: 145px;
   border-radius: 10px 10px 0 0;
-  border: 3px solid var(--white);
+  border: 2px solid var(--white);
 }
 
 .character-card h2 {
   position: absolute;
   top: 0px;
   width: 100%;
-  background-color: rgba(16, 18, 88, 0.271);
+  background-color: rgba(16, 18, 88, 0.612);
   font-size: 15px;
   text-align: center;
   border-radius: 10px 10px 0 0;
@@ -58,6 +59,6 @@ span{
 }
 .character-card button:hover{
   transition: var(--transition);
-  border: 1.5px solid var(--lBlue);
-  color: var(--lBlue);
+  height: 30px;
+  font-size: large;
 }

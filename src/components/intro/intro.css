@@ -3,6 +3,9 @@ section.banner{
     background-image: url('../src/assets/rnm.png');
     height: auto;
     margin-bottom: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 section.banner h2{
     font-size: 2.5rem;

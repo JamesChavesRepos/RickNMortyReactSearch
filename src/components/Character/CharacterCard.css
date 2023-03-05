@@ -16,10 +16,11 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
-  background-color: var(--white);
+  background-image: linear-gradient(var(--dBlue), white)
 }
 .character-card:hover{
-  border:1px solid var(--lBlue);;
+  border:1px solid var(--lBlue);
+  background: var(--dBlue3);
 }
 .character-card img {
   height: auto;
@@ -39,7 +40,7 @@
 }
 span{
   font-size: 13px;
-  color:var(--dBlue2);
+  color:white;
   padding: 0px 10px;
 }
 .character-card button {

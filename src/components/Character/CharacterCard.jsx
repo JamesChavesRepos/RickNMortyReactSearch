@@ -4,8 +4,9 @@ import './CharacterCard.css'
 
 export default function CharacterCard({ props }) {
 
-  let { id, name, status, species, image, location } = props
-  
+  console.log(props)
+  let { id, name, status, species, image, location , gender,episode} = props
+  console.log()
   const [favorites, dispatchFavorites] = useFavorites();
   const addFavorite = (character) => {
     dispatchFavorites({
@@ -32,7 +33,12 @@ export default function CharacterCard({ props }) {
         <span>
           Specie : {species}
           <br />
+          Gender : {gender}
+          <br/>
+          Episode : {episode[0].split('/').pop()}
+          <br />
           From : {location.name}
+          <br />
         </span>
         {
           favorites.includes(id) ?

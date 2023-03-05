@@ -1,0 +1,9 @@
+section.banner{
+    max-width: 100%;
+    background-image: url('../src/assets/rnm.png');
+    height: auto;
+    margin-bottom: 20px;
+}
+section.banner h2{
+    font-size: 2.5rem;
+}

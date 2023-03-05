@@ -1,10 +1,10 @@
 .card-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
   height: max-content;
-  transition: var(--transition);
+  transition: 100s ease-in-out;
 }
 .character-card {
   border-radius: 10px 10px 0 0;
@@ -19,13 +19,13 @@
   background-color: var(--white);
 }
 .character-card:hover{
-  border:3px solid var(--lBlue);;
+  border:1px solid var(--lBlue);;
 }
 .character-card img {
-  height: 200px;
+  height: auto;
   width: 145px;
   border-radius: 10px 10px 0 0;
-  border: 2px solid var(--white);
+  border: 1.5px solid var(--white);
 }
 
 .character-card h2 {

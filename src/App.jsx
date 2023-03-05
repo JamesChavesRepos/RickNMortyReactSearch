@@ -4,6 +4,8 @@ import getCharacters from "./api";
 import CharacterCard from "./components/Character/CharacterCard";
 import FavoriteSection from "./components/Favorites/FavoriteSection";
 import './App.css'
+import Intro from "./components/intro/Intro";
+import searchIcon from './assets/search.svg'
 
 function App() {
   const [data, setData] = useState();
@@ -22,9 +24,9 @@ function App() {
 
   return (
     <main className="App">
-      {favorites.length > 0 ? <FavoriteSection props={data} /> : <intro />}
-      <input placeholder="Seacrh for your favorite characters...." type="text" name="search" className="search-input" onChange={(event) => setSearch(event.target.value)} />
-      {loading && <div>🔎 Loading...</div>}
+      {favorites.length > 0 ? <FavoriteSection props={data} /> : <Intro />}
+      <input placeholder="Type a name...." type="text" name="search" className="search-input" onChange={(event) => setSearch(event.target.value)} />
+      {loading && <div> <img src={searchIcon}/> Loading...</div>}
 
       <div className="card-container">
         {data?.results &&

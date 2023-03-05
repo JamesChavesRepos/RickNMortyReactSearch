@@ -6,6 +6,7 @@
   height: max-content;
   transition: 100s ease-in-out;
 }
+
 .character-card {
   border-radius: 10px 10px 0 0;
   height: 300px;
@@ -18,13 +19,15 @@
   padding-bottom: 20px;
   background-image: linear-gradient(var(--dBlue), white)
 }
-.character-card:hover{
-  border:1px solid var(--lBlue);
+
+.character-card:hover {
+  border: 1px solid var(--lBlue);
   background: var(--dBlue3);
 }
+
 .character-card img {
   height: auto;
-  width: 145px;
+  width: 150px;
   border-radius: 10px 10px 0 0;
   border: 1.5px solid var(--white);
 }
@@ -38,10 +41,14 @@
   text-align: center;
   border-radius: 10px 10px 0 0;
 }
-span{
-  font-size: 13px;
-  padding: 0px 10px;
+
+span {
+  text-align: left;
+  font-size: 12px;
+  padding-left: 7px;
+  text-shadow: -0.5px -0.5px 0 var(--dBlue2), 0.5px -0.5px 0 var(--dBlue2), -0.5px 0.5px 0 var(--dBlue2), 0.5px 0.5px 0 var(--dBlue2);
 }
+
 .character-card button {
   margin-top: 10px;
   width: 100%;
@@ -54,10 +61,13 @@ span{
   bottom: 0;
   cursor: pointer;
 }
-.character-card button{
+
+.character-card button {
+  box-shadow: 0px -3px 25px var(--dBlue2);
   background-color: var(--dBlue2);
 }
-.character-card button:hover{
+
+.character-card button:hover {
   transition: var(--transition);
   height: 30px;
   font-size: large;

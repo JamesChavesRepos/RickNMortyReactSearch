@@ -24,7 +24,8 @@ function App() {
 
   return (
     <main className="App">
-      {favorites.length > 0 ? <FavoriteSection props={data} /> : <Intro />}
+      <Intro />
+      {favorites.length > 0 ? <FavoriteSection props={data} /> : ''}
       <input placeholder="Type a name...." type="text" name="search" className="search-input" onChange={(event) => setSearch(event.target.value)} />
       {loading && <div> <img src={searchIcon}/> Loading...</div>}
 

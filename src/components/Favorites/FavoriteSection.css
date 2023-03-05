@@ -10,7 +10,10 @@
     left: -50px;
     overflow-x: auto;
   }
-  
+  .fav-section .character-card:hover{
+    scale: 0.9;
+    transition: var(--transition);
+  }
   .fav-section article {
     margin-left: 15px;
   }

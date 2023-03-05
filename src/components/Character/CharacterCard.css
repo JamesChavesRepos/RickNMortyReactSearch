@@ -6,7 +6,10 @@
   height: max-content;
   transition: 100s ease-in-out;
 }
-
+.card-container .character-card:hover{
+  transition: var(--transition);
+  scale: 1.1;
+}
 .character-card {
   border-radius: 10px 10px 0 0;
   height: 300px;
@@ -17,12 +20,13 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
-  background-image: linear-gradient(var(--dBlue), white)
+  background-image: linear-gradient(var(--dBlue), var(--white));
 }
 
 .character-card:hover {
-  border: 1px solid var(--lBlue);
+  border: 0.3px solid var(--lBlue);
   background: var(--dBlue3);
+
 }
 
 .character-card img {
@@ -63,7 +67,7 @@ span {
 }
 
 .character-card button {
-  box-shadow: 0px -3px 25px var(--dBlue2);
+  box-shadow: 0px -2px 35px var(--dBlue2);
   background-color: var(--dBlue2);
 }
 
@@ -71,4 +75,8 @@ span {
   transition: var(--transition);
   height: 30px;
   font-size: large;
+}
+.character-card button svg{
+  height: 50%;
+  width: auto;
 }

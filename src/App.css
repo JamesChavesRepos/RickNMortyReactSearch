@@ -16,6 +16,25 @@
 .App {
   padding: 2rem;
 }
+svg.loader{
+  height: 10%;
+  width: auto;
+  position: relative;
+top: 10%;
+left: 15%;
+  text-align: center;
+  transform-origin: center;
+  animation: mercury-group 2s linear infinite;
+}
+@keyframes mercury-group {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
 h5 {
   position: absolute;
   font-size: 20px;

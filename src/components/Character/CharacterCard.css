@@ -76,7 +76,8 @@ span {
   height: 30px;
   font-size: large;
 }
-.character-card button svg{
+.character-card button img{
   height: 50%;
   width: auto;
+  border: none;
 }

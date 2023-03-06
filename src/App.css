@@ -9,23 +9,28 @@
   border: none;
   margin-bottom: 25px;
 }
-.search-input::placeholder{
+
+.search-input::placeholder {
   font-size: 14px;
   color: var(--light);
 }
+
 .App {
   padding: 2rem;
 }
-svg.loader{
+
+img.loader {
   height: 10%;
   width: auto;
-  position: relative;
-top: 10%;
-left: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 15%;
   text-align: center;
   transform-origin: center;
   animation: mercury-group 2s linear infinite;
 }
+
 @keyframes mercury-group {
   0% {
     transform: rotateZ(0deg);
@@ -35,6 +40,7 @@ left: 15%;
     transform: rotateZ(-360deg);
   }
 }
+
 h5 {
   position: absolute;
   font-size: 20px;
@@ -42,9 +48,11 @@ h5 {
   right: 5px;
   text-decoration: underline;
 }
-.alive{
+
+.alive {
   color: green;
 }
-.dead{
+
+.dead {
   color: red;
 }
